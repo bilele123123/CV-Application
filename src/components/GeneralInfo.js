@@ -5,11 +5,11 @@ class GeneralInfo extends Component {
         super(props);
         this.state = {
             editing: false,
-            name: 'First and Last',
+            name: '',
             newName: '',
-            email: 'email@example.com',
+            email: '',
             newEmail: '',
-            phoneNumber: '123-456-7890',
+            phoneNumber: '',
             newPhoneNumber: ''
         };
     }
@@ -41,29 +41,43 @@ class GeneralInfo extends Component {
         const { editing, name, newName, email, newEmail, phoneNumber, newPhoneNumber } = this.state;
 
         return (
-            <div>
-                <h2>General Information</h2>
+            <div className='container-genInfo'>
+                <div className='genInfo-header'>
+                    <h2>General Information</h2>
+                </div>
                 {editing ? (
-                    <div>
-                        <label>Name:
-                            <input type="text" value={newName} onChange={(e) => this.handleInputChange(e, 'newName')} />
-                        </label>
-                        <label>
-                            Email:
-                            <input type="text" value={newEmail} onChange={(e) => this.handleInputChange(e, 'newEmail')} />
-                        </label>
-                        <label>
-                            Phone Number:
-                            <input type="text" value={newPhoneNumber} onChange={(e) => this.handleInputChange(e, 'newPhoneNumber')} />
-                        </label>
-                        <button onClick={this.handleSaveClick}>Save</button>
+                    <div className='genInfo-content'>
+                        <div className='input-group'>
+                            <label>Name:</label>
+                            <input className='input-field' placeholder='Enter your first and last' type="text" value={newName} onChange={(e) => this.handleInputChange(e, 'newName')} />
+                        </div>
+                        <div className='input-group'>
+                            <label>Email:</label>
+                            <input className='input-field' placeholder='Enter your email' type="text" value={newEmail} onChange={(e) => this.handleInputChange(e, 'newEmail')} />
+                        </div>
+                        <div className='input-group'>
+                            <label>Phone Number:</label>
+                            <input className='input-field' placeholder='Enter your phone number' type="number" value={newPhoneNumber} onChange={(e) => this.handleInputChange(e, 'newPhoneNumber')} />
+                        </div>
+                        <div className='btn-group'>
+                            <button className='saveBTN' onClick={this.handleSaveClick}>Save</button>
+                        </div>
                     </div>
                 ) : (
-                    <div>
-                        <p>Name: {name}</p>
-                        <p>Email: {email}</p>
-                        <p>Phone Number: {phoneNumber}</p>
-                        <button onClick={this.handleEditClick}>Edit</button>
+                    <div className='genInfo-input'>
+                        <div className='input-group'>
+                            <label>Name:</label>
+                            <span className='input-value'>{name}</span>
+                        </div>
+                        <div className='input-group'>
+                            <label>Email:</label>
+                            <span className='input-value'>{email}</span>
+                        </div>
+                        <div className='input-group'>
+                            <label>Phone Number:</label>
+                            <span className='input-value'>{phoneNumber}</span>
+                        </div>
+                        <button className='editBTN' onClick={this.handleEditClick}>Edit</button>
                     </div>
                 )}
             </div>

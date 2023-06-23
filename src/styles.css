@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+.container {
+    width: 100%;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin: 50px 0;
+    color: #EEEEEE;
+    background-color: #393E46;
+    transition: box-shadow 0.3s;
+    box-shadow: 0 0 10px #9DB2BF, 0 0 20px #9DB2BF, 0 0 30px #9DB2BF;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    border-radius: 20px;
+}
+
+.container:hover {
+    box-shadow: 0 0 10px #594545, 0 0 20px #594545, 0 0 30px #594545;
+}
+
+.header {
+    background-color: #222831;
+    padding: 20px;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+.header-title {
+    width: 100%;
+}
+
+.genInfo-header {
+    margin: 10px 0;
+}
+
+.main-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.saveBTN,
+.editBTN {
+    width: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+.saveBTN:hover,
+.editBTN:hover {
+    opacity: 0.8;
+}
+
+.container-genInfo {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.genInfo-content,
+.genInfo-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 50px;
+}
+
+.input-group label {
+    margin-right: 5px;
+}
+
+.input-value {
+    margin-left: 5px;
+}
+
+
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.label {
+    margin-right: 10px;
+}
+
+.divider {
+    border-top: 3px solid #dee2e6;
+    margin: 20px 0;
+    width: 50%;
+    border-radius: 10px;
+}
