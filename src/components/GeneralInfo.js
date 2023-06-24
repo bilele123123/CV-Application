@@ -39,6 +39,7 @@ class GeneralInfo extends Component {
 
     render() {
         const { editing, name, newName, email, newEmail, phoneNumber, newPhoneNumber } = this.state;
+        const { showEditButtons } = this.props;
 
         return (
             <div className='container-genInfo'>
@@ -60,7 +61,11 @@ class GeneralInfo extends Component {
                             <input className='input-field' placeholder='Enter your phone number' type="number" value={newPhoneNumber} onChange={(e) => this.handleInputChange(e, 'newPhoneNumber')} />
                         </div>
                         <div className='btn-group'>
-                            <button className='saveBTN' onClick={this.handleSaveClick}>Save</button>
+                            {showEditButtons && (
+                                <button className='submitBTN' onClick={this.handleSaveClick}>
+                                    Save
+                                </button>
+                            )}
                         </div>
                     </div>
                 ) : (
@@ -77,7 +82,11 @@ class GeneralInfo extends Component {
                             <label>Phone Number:</label>
                             <span className='input-value'>{phoneNumber}</span>
                         </div>
-                        <button className='editBTN' onClick={this.handleEditClick}>Edit</button>
+                        {showEditButtons && (
+                            <div className='btn-group'>
+                                <button className='editBTN' onClick={this.handleEditClick}>Edit</button>
+                            </div>
+                        )}
                     </div>
                 )}
             </div>

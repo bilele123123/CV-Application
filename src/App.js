@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import GeneralInfo from './components/GeneralInfo';
 import './styles.css';
+import EducationalExperience from './components/EducationalExperience';
+import PracticalExperience from './components/PracticalExperience';
+import CVApplication from './components/CVApplication';
 
 class App extends Component {
   render() {
@@ -12,8 +15,7 @@ class App extends Component {
         </div>
 
         <div className='main-content'>
-          <GeneralInfo />
-          <div class="divider"></div>
+          <CVApplication></CVApplication>
         </div>
 
 

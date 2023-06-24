@@ -42,7 +42,8 @@
 }
 
 .saveBTN,
-.editBTN {
+.editBTN,
+.submitBTN {
     width: 100px;
     padding: 10px;
     border-radius: 8px;
@@ -50,7 +51,8 @@
 }
 
 .saveBTN:hover,
-.editBTN:hover {
+.editBTN:hover,
+.submitBTN:hover {
     opacity: 0.8;
 }
 
@@ -98,6 +100,22 @@
 .divider {
     border-top: 3px solid #dee2e6;
     margin: 20px 0;
-    width: 50%;
     border-radius: 10px;
+}
+
+.container-practicalExp {
+    margin-bottom: 50px;
+}
+
+.container-practicalExp {
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.submitBTN {
+    margin-bottom: 50px;
 }
